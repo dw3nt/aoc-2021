@@ -17,22 +17,21 @@ function countOneBits() {
     return oneCounts;
 }
 
-function calculateRates(counts) {
+function calculateGammaRate(counts) {
     var gammaStr = "";
-    var epsilonStr = "";
     counts.forEach((count) => {
         if(count > (input.length / 2)) {
             gammaStr += "1";
-            epsilonStr += "0";
         } else {
             gammaStr += "0";
-            epsilonStr += "1";
         }
     });
 
-    return [ parseInt(gammaStr, 2), parseInt(epsilonStr, 2) ];
+    return parseInt(gammaStr, 2);
 }
 
 var bitCounts = countOneBits()
-var rates = calculateRates(bitCounts);
-console.log(rates[0] * rates[1]);
+var gammaRate = calculateGammaRate(bitCounts);
+var epsilonRate = ~gammaRate & (1 << bitCounts.length) - 1;
+
+console.log(gammaRate * epsilonRate);
