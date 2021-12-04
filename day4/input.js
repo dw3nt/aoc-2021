@@ -21,7 +21,7 @@ const input = fs.readFileSync(path.resolve(__dirname, inputFile), "utf-8", (err,
     return data;
 }).toString().trim().split("\n");
 
-inputData.numbers = input[0].split(",");
+inputData.numbers = input[0].split(",").map((element) => parseInt(element));
 
 var board = [];
 for(let i = 1; i < input.length; i++) {
