@@ -1,7 +1,14 @@
+`day6/part1` and `day6/part2` take an additional parameter after their input file which specifies the number of days. Defaults to 80 if not supplied. 
+
+Example: Get fish count for example input after 18 days
+```
+node day6/part1 test-input.txt 18
+```
+
 ## Answers:
 | Part 1    | Part 2    |
 |-----------|:---------:|
-| 0      | 0   |
+| 356190      | 1617359101538   |
 
 ## --- Day 6: Lanternfish ---
 The sea floor is getting steeper. Maybe the sleigh keys got carried this way?
