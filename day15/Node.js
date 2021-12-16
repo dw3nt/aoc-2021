@@ -18,8 +18,8 @@ class Node {
     }
 
     addNeighbors(grid) {
-        let rowSize = grid[0].length;
-        let colSize = grid.length;
+        let rowSize = grid.length;
+        let colSize = grid[0].length;
         
         if (this.row - 1 >= 0) {
             this.neighbors.push(grid[ this.row - 1 ][ this.col ]);
