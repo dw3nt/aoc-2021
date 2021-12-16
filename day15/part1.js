@@ -15,7 +15,6 @@ function getLowestCostFromSet(set) {
 function aStar(start, goal) {
     let openSet = [ start ];
     let closedSet = [];
-    let cameFrom = null;
 
     while (openSet.length > 0) {
         let current = getLowestCostFromSet(openSet);
